@@ -448,6 +448,19 @@ body {
   line-height: 1.45;
 }
 
+.rule-desc a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.rule-desc a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(223, 177, 91, 0.6);
+}
+
 /* SOCIALS SECTION & INSTAGRAM */
 .socials-card {
   margin-top: 1rem;

@@ -39,26 +39,44 @@ const EVENT_CONFIG = {
     {
       id: "rule-01",
       number: "01",
-      title: "Ticket QR Required",
-      text: "Every ticket includes a unique QR code. Present your physical ticket or clear high-resolution digital pass at check-in for one-time entry."
+      title: "Dress Code Guidelines",
+      text: "Gentlemen are required to attend in formal attire. Ladies are requested to wear elegant western party wear suitable for an evening gala. For styling queries or guidance, kindly contact our team on Instagram (@far.ewell26)."
     },
     {
       id: "rule-02",
       number: "02",
-      title: "Age & Identification",
-      text: "This is a strictly 21+ event. Government-issued photo identification (Passport, Driver's License) is required upon arrival."
+      title: "Personal Belongings & Valuables",
+      text: "Guests are solely responsible for the safekeeping of their personal items and valuables. Event organizers and venue management accept no liability for any lost, misplaced, or stolen belongings."
     },
     {
       id: "rule-03",
       number: "03",
-      title: "Strict Dress Code",
-      text: "Dress code is Black Tie & Touch of Gold. Evening gowns, cocktail glamour, and sharp tailored suits are required. Athletic wear and torn clothing are strictly prohibited."
+      title: "Zero Tolerance for Violence",
+      text: "Physical altercations, fighting, or aggressive behavior will not be tolerated under any circumstance. Offending individuals will face immediate ejection from the venue and referral to security authorities."
     },
     {
       id: "rule-04",
       number: "04",
-      title: "Security & Screening",
-      text: "All guests and small bags are subject to security screening. Outside food, alcoholic beverages, and professional recording equipment are not permitted."
+      title: "Strict No-Refund Policy",
+      text: "All pass contributions and ticket purchases are strictly non-refundable and non-transferable under all circumstances, including denial of admission or voluntary early departure."
+    },
+    {
+      id: "rule-05",
+      number: "05",
+      title: "Code of Conduct & Decorum",
+      text: "A standard of mutual respect and courteous conduct is mandatory throughout the event. Inappropriate, disruptive, or disrespectful behavior will result in instant removal without refund."
+    },
+    {
+      id: "rule-06",
+      number: "06",
+      title: "Authorized Physical Pass Required",
+      text: "Admission strictly requires presentation of the original physical pass bearing an authorized organizing committee member's signature. Digital copies or unsigned passes will not be permitted entry."
+    },
+    {
+      id: "rule-07",
+      number: "07",
+      title: "Liability for Venue Property & Damages",
+      text: "Guests will be held fully liable for any accidental or deliberate damage caused to venue facilities, sound/lighting gear, or decor. Full repair or replacement costs must be settled directly by the responsible party."
     }
   ],
 

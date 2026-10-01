@@ -58,11 +58,18 @@ function applyEventConfig(cfg) {
         card.className = 'rule-card';
         const numStr = rule.number || String(idx + 1).padStart(2, '0');
 
+        const escapedTitle = escapeHtml(rule.title || 'Rule');
+        const escapedDesc = escapeHtml(rule.text || '');
+        const linkedDesc = escapedDesc.replace(
+          /@([a-zA-Z0-9._]+)/g,
+          '<a href="https://instagram.com/$1" target="_blank" rel="noopener noreferrer">@$1</a>'
+        );
+
         card.innerHTML = `
           <div class="rule-num">${escapeHtml(numStr)}</div>
           <div class="rule-body">
-            <h4 class="rule-title">${escapeHtml(rule.title || 'Rule')}</h4>
-            <p class="rule-desc">${escapeHtml(rule.text || '')}</p>
+            <h4 class="rule-title">${escapedTitle}</h4>
+            <p class="rule-desc">${linkedDesc}</p>
           </div>
         `;
         rulesContainer.appendChild(card);
