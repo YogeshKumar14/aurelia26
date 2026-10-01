@@ -79,26 +79,16 @@ If you own a custom domain (purchased from Namecheap, Cloudflare, GoDaddy, etc.)
 
 Because the QR code encodes the **website URL**, phone cameras simply load whatever content is currently hosted at that URL. 
 
-To post a new announcement, change the event date, or update the DJ lineup:
+To update the venue, timings, rules, or Instagram profile:
 
 1. Open `event-config.js` in any text editor (or directly on GitHub).
-2. To post a new announcement, add an entry to the `announcements` list:
-   ```javascript
-   {
-     id: "ann-04",
-     timestamp: "Just Announced",
-     type: "highlight", // "highlight", "important", or "info"
-     title: "VIP Red Carpet Starts at 9:30 PM",
-     body: "Early access granted for VIP table and gold ticket holders.",
-     badge: "DOORS EARLY"
-   }
-   ```
-3. To change the countdown date, edit `eventDateTime`:
-   ```javascript
-   eventDateTime: "2026-10-24T22:00:00",
-   ```
-4. Save and commit/push your changes.
-5. In ~30 seconds, anyone scanning the physical ticket will see the new content!
+2. Edit the desired section:
+   - **Update Timing:** Change `timing.primaryTime`, `timing.date`, or `timing.doorsNote`.
+   - **Update Venue:** Change `venue.name`, `venue.address`, `venue.landmark`, or `venue.googleMapsUrl`.
+   - **Add / Remove Rules:** Simply add or remove objects from the `rules: [...]` array.
+   - **Update Socials:** Update `socials.instagram.handle` or `socials.instagram.profileUrl`.
+3. Save and commit/push your changes.
+4. In ~30 seconds, anyone scanning the physical ticket will see the new content!
 
 ---
 
