@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Aurelia '26 | A Golden Evening — Official After Party</title>
+  
+  <!-- SEO & Social Sharing Previews (WhatsApp, Instagram, iMessage) -->
+  <meta name="description" content="Official event portal for Aurelia '26 After Party. Venue details, timing, guest rules, and live Instagram updates.">
+  <meta property="og:title" content="Aurelia '26 | A Golden Evening">
+  <meta property="og:description" content="The Official After Party — Venue, Timings, Rules & Guest Info.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/golden_bowtie_front_transparent.png">
+  <meta name="theme-color" content="#070709">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Typography: Parisienne (calligraphy), Cinzel (luxury serif), Montserrat (clean sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Glitter Rain Header (Derived directly from ticket.xcf) -->
+  <div class="glitter-rain-banner" aria-hidden="true"></div>
+
+  <!-- Ambient Golden Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Main Portal Card -->
+  <div class="ticket-portal-card">
+
+    <!-- HEADER / HERO -->
+    <header class="portal-header">
+      <!-- Golden Bowtie Emblem -->
+      <div class="bowtie-emblem-wrap">
+        <img src="assets/golden_corner_ribbon_bowtie_transparent.png" alt="Aurelia Golden Bowtie" class="bowtie-emblem">
+      </div>
+
+      <!-- VIP Pass Badge -->
+      <div class="vip-pill">
+        <span class="vip-dot"></span>
+        <span>EXCLUSIVE VIP ACCESS • TICKET PORTAL</span>
+      </div>
+
+      <!-- Main Titles (Matching ticket.xcf) -->
+      <h1 class="ticket-title" id="ticketTitle">Aurelia '26</h1>
+      <h2 class="ticket-subtitle" id="ticketSubtitle">A GOLDEN EVENING</h2>
+      <p class="ticket-tagline" id="ticketTagline">THE OFFICIAL AFTER PARTY</p>
+
+      <!-- Ticket Perforation Dotted Line -->
+      <div class="perforation-divider" aria-hidden="true">
+        <span class="notch notch-left"></span>
+        <span class="dotted-line"></span>
+        <span class="notch notch-right"></span>
+      </div>
+    </header>
+
+    <!-- SECTION 1: TIMING & VENUE -->
+    <section class="portal-section" id="timing-venue">
+      <div class="section-badge">EVENT DETAILS</div>
+      <h3 class="section-heading">Time & Location</h3>
+
+      <div class="details-grid">
+        <!-- Timing Card -->
+        <div class="detail-box">
+          <div class="detail-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="detail-content">
+            <span class="detail-label">TIMING</span>
+            <div class="detail-primary" id="timePrimary">TIME: 5:00 PM to 11:00 PM</div>
+            <div class="detail-secondary" id="timeDate">Saturday, October 24, 2026</div>
+            <div class="detail-note" id="timeDoors">Doors open at 5:00 PM • Last entry at 8:00 PM</div>
+          </div>
+        </div>
+
+        <!-- Venue Card -->
+        <div class="detail-box">
+          <div class="detail-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div class="detail-content">
+            <span class="detail-label">VENUE</span>
+            <div class="detail-primary" id="venueName">The Grand Aurelia Skylounge</div>
+            <div class="detail-secondary" id="venueAddress">700 Golden Crest Boulevard, Penthouse Level</div>
+            <div class="detail-note" id="venueLandmark">Direct express elevator access from North Lobby</div>
+
+            <div class="venue-action-buttons">
+              <a href="https://maps.google.com/?q=The+Grand+Aurelia+Skylounge" target="_blank" rel="noopener noreferrer" class="btn-gold-sm" id="btnDirections">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                Google Maps
+              </a>
+              <button type="button" class="btn-outline-sm" id="btnCopyAddress">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Address
+              </button>
+            </div>
+            <div class="copy-alert" id="copyAlert">✓ Address copied to clipboard!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: RULES & GUIDELINES -->
+    <section class="portal-section" id="rules">
+      <div class="section-badge">GUEST INFORMATION</div>
+      <h3 class="section-heading">Event Rules & Guidelines</h3>
+      <p class="section-subtext">Please review before arrival for smooth entry.</p>
+
+      <div class="rules-container" id="rulesContainer">
+        <!-- Rendered dynamically from event-config.js. Fallback static content for noscript/offline: -->
+        <div class="rule-card">
+          <div class="rule-num">01</div>
+          <div class="rule-body">
+            <h4 class="rule-title">Ticket QR Required</h4>
+            <p class="rule-desc">Every ticket includes a unique QR code. Present your physical ticket or clear high-resolution digital pass at check-in for one-time entry.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-num">02</div>
+          <div class="rule-body">
+            <h4 class="rule-title">Age & Identification</h4>
+            <p class="rule-desc">This is a strictly 21+ event. Government-issued photo identification (Passport, Driver's License) is required upon arrival.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-num">03</div>
+          <div class="rule-body">
+            <h4 class="rule-title">Strict Dress Code</h4>
+            <p class="rule-desc">Dress code is Black Tie & Touch of Gold. Evening gowns, cocktail glamour, and sharp tailored suits are required. Athletic wear and torn clothing are strictly prohibited.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <div class="rule-num">04</div>
+          <div class="rule-body">
+            <h4 class="rule-title">Security & Screening</h4>
+            <p class="rule-desc">All guests and small bags are subject to security screening. Outside food, alcoholic beverages, and professional recording equipment are not permitted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SOCIALS & INSTAGRAM -->
+    <section class="portal-section" id="socials">
+      <div class="section-badge">OFFICIAL SOCIALS</div>
+      <h3 class="section-heading">Connect With Us</h3>
+      <p class="section-subtext">Follow our Instagram for live stories, photos, and performer announcements.</p>
+
+      <div class="socials-card">
+        <a href="https://instagram.com/aurelia26party" target="_blank" rel="noopener noreferrer" class="instagram-banner-link" id="instaLink">
+          <div class="insta-icon-box">
+            <svg class="insta-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </div>
+          <div class="insta-meta">
+            <span class="insta-handle" id="instaHandle">@aurelia26party</span>
+            <span class="insta-desc" id="instaDesc">Official Photos, Live Announcements & Performer Lineup</span>
+          </div>
+          <div class="insta-cta">
+            <span class="btn-insta">
+              Follow Us
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="portal-footer">
+      <div class="perforation-divider bottom-divider" aria-hidden="true">
+        <span class="dotted-line"></span>
+      </div>
+      <div class="footer-bowtie">
+        <img src="assets/golden_corner_ribbon_bowtie_transparent.png" alt="" class="footer-bowtie-img">
+      </div>
+      <div class="footer-title">AURELIA '26 • THE OFFICIAL AFTER PARTY</div>
+      <p class="footer-text">
+        Scanned via Physical Ticket QR • Live Event Information Portal<br>
+        © 2026 Aurelia Entertainment. All rights reserved.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="event-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
