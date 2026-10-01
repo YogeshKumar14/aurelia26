@@ -28,7 +28,9 @@ function applyEventConfig(cfg) {
   // 2. Timing
   if (cfg.timing) {
     if (cfg.timing.primaryTime) {
-      setElemText('timePrimary', `TIME: ${cfg.timing.primaryTime}`);
+      const pTime = String(cfg.timing.primaryTime).trim();
+      const timeStr = /^TIME:/i.test(pTime) ? pTime : `TIME: ${pTime}`;
+      setElemText('timePrimary', timeStr);
     }
     if (cfg.timing.date) setElemText('timeDate', cfg.timing.date);
     if (cfg.timing.doorsNote) setElemText('timeDoors', cfg.timing.doorsNote);
@@ -72,10 +74,14 @@ function applyEventConfig(cfg) {
   if (cfg.socials && cfg.socials.instagram) {
     const insta = cfg.socials.instagram;
     const linkElem = document.getElementById('instaLink');
-    if (linkElem && insta.profileUrl) {
-      linkElem.href = insta.profileUrl;
+    const rawHandle = insta.handle ? String(insta.handle).trim() : '';
+    const cleanHandle = rawHandle.replace(/^@+/, '');
+    const displayHandle = rawHandle ? (rawHandle.startsWith('@') ? rawHandle : `@${rawHandle}`) : '';
+
+    if (linkElem) {
+      linkElem.href = insta.profileUrl || (cleanHandle ? `https://instagram.com/${cleanHandle}` : '#');
     }
-    if (insta.handle) setElemText('instaHandle', insta.handle);
+    if (displayHandle) setElemText('instaHandle', displayHandle);
     if (insta.subtitle) setElemText('instaDesc', insta.subtitle);
   }
 }
@@ -89,7 +95,8 @@ function setupCopyAddress(addressText) {
   if (!btn) return;
 
   btn.addEventListener('click', () => {
-    const textToCopy = addressText || (document.getElementById('venueAddress') ? document.getElementById('venueAddress').innerText : '');
+    const venueEl = document.getElementById('venueAddress');
+    const textToCopy = (venueEl && venueEl.innerText.trim()) || addressText;
     if (!textToCopy) return;
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
