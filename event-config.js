@@ -17,20 +17,19 @@ const EVENT_CONFIG = {
 
   // --- TIMING (Template: easily edit time and date below) ---
   timing: {
-    primaryTime: "5:00 PM to 11:00 PM",
-    date: "Saturday, October 24, 2026",
-    doorsNote: "Doors open at 5:00 PM • Last entry at 8:00 PM"
+    primaryTime: "To Be Announced",
+    date: "Coming Soon",
+    doorsNote: "Exact date, timings & entrance schedule will be announced soon"
   },
 
-  // --- VENUE (Template: easily edit venue name, address, and maps link below) ---
+  // --- VENUE ---
   venue: {
-    name: "The Grand Aurelia Skylounge",
-    address: "700 Golden Crest Boulevard, Penthouse Level",
-    city: "Metropolis",
-    landmark: "Direct private express elevator access from North Lobby",
-    valetNote: "Complimentary VIP Valet Parking at West Gate",
-    // Google Maps link (update with actual destination)
-    googleMapsUrl: "https://maps.google.com/?q=The+Grand+Aurelia+Skylounge"
+    name: "Western Farms",
+    address: "Mahatma Gandhi Marg, Marafari, Bokaro Steel City, Jharkhand 827001",
+    city: "Bokaro Steel City",
+    landmark: "Mahatma Gandhi Marg, Marafari",
+    valetNote: "On-site parking available",
+    googleMapsUrl: "https://maps.app.goo.gl/6WDG9bNLaM9S7r8z6?g_st=aw"
   },
 
   // --- RULES & GUIDELINES ---
@@ -66,8 +65,8 @@ const EVENT_CONFIG = {
   // --- SOCIALS (Instagram) ---
   socials: {
     instagram: {
-      handle: "@aurelia26party",
-      profileUrl: "https://instagram.com/aurelia26party",
+      handle: "@far.ewell26",
+      profileUrl: "https://www.instagram.com/far.ewell26?stkn=MTJ0c2J0eWd0ZHg4dw==",
       displayText: "Follow us on Instagram",
       subtitle: "Official Photos, Live Announcements & Performer Lineup"
     }
