@@ -77,6 +77,12 @@ const EVENT_CONFIG = {
       number: "07",
       title: "Liability for Venue Property & Damages",
       text: "Guests will be held fully liable for any accidental or deliberate damage caused to venue facilities, sound/lighting gear, or decor. Full repair or replacement costs must be settled directly by the responsible party."
+    },
+    {
+      id: "rule-08",
+      number: "08",
+      title: "No Replacement for Lost Passes",
+      text: "Physical passes will strictly not be reissued or replaced under any circumstance if lost, misplaced, or stolen. Please safeguard your pass diligently, as entry will be strictly denied without the original signed pass."
     }
   ],
 
