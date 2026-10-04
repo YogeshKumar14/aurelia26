@@ -232,8 +232,23 @@
 
   </div>
 
-  <!-- Scripts -->
-  <script src="event-config.js"></script>
-  <script src="script.js"></script>
+  <!-- Scripts (Cache-Busted for Real-Time Event Updates) -->
+  <script>
+    (function() {
+      var ts = Date.now();
+      var s1 = document.createElement('script');
+      s1.src = 'event-config.js?v=' + ts;
+      s1.onload = function() {
+        var s2 = document.createElement('script');
+        s2.src = 'script.js?v=' + ts;
+        document.body.appendChild(s2);
+      };
+      document.body.appendChild(s1);
+    })();
+  </script>
+  <noscript>
+    <script src="event-config.js"></script>
+    <script src="script.js"></script>
+  </noscript>
 </body>
 </html>

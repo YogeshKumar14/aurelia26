@@ -7,14 +7,20 @@
  * ==============================================================================
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initPortal() {
   const config = typeof EVENT_CONFIG !== 'undefined' ? EVENT_CONFIG : null;
 
   if (config) {
     applyEventConfig(config);
     setupCopyAddress(config.venue ? config.venue.address : '');
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPortal);
+} else {
+  initPortal();
+}
 
 /**
  * Applies all configuration fields from event-config.js
@@ -29,11 +35,25 @@ function applyEventConfig(cfg) {
   if (cfg.timing) {
     if (cfg.timing.primaryTime) {
       const pTime = String(cfg.timing.primaryTime).trim();
-      const timeStr = /^TIME:/i.test(pTime) ? pTime : `TIME: ${pTime}`;
-      setElemText('timePrimary', timeStr);
+      const isPlaceholder = /^to\s*be\s*announced$/i.test(pTime) || /^tba$/i.test(pTime);
+      const current = document.getElementById('timePrimary');
+      const hasExplicit = current && current.textContent && !/to\s*be\s*announced/i.test(current.textContent);
+
+      if (!isPlaceholder || !hasExplicit) {
+        const timeStr = /^TIME:/i.test(pTime) ? pTime : `TIME: ${pTime}`;
+        setElemText('timePrimary', timeStr);
+      }
     }
     if (cfg.timing.date) setElemText('timeDate', cfg.timing.date);
-    if (cfg.timing.doorsNote) setElemText('timeDoors', cfg.timing.doorsNote);
+    if (cfg.timing.doorsNote) {
+      const doors = String(cfg.timing.doorsNote).trim();
+      const isPlaceholder = /exact date.*announced/i.test(doors);
+      const currentDoors = document.getElementById('timeDoors');
+      const hasExplicitDoors = currentDoors && currentDoors.textContent && !/exact date.*announced/i.test(currentDoors.textContent);
+      if (!isPlaceholder || !hasExplicitDoors) {
+        setElemText('timeDoors', doors);
+      }
+    }
   }
 
   // 3. Venue
