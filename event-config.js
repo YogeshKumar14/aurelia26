@@ -17,9 +17,9 @@ const EVENT_CONFIG = {
 
   // --- TIMING (Template: easily edit time and date below) ---
   timing: {
-    primaryTime: "To Be Announced",
+    primaryTime: "5:00 PM to 11:00 PM",
     date: "Coming Soon",
-    doorsNote: "Exact date, timings & entrance schedule will be announced soon"
+    doorsNote: "Doors open at 5:00 PM • Party concludes at 11:00 PM"
   },
 
   // --- VENUE ---
